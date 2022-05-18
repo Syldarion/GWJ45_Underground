@@ -21,6 +21,7 @@ func get_drag_data(position):
 	preview.rect_position = -position
 	set_drag_preview(preview_parent)
 	
+	emit_signal("mouse_exited")
 	hide()
 	return self
 
