@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/card_overlay.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Blizzard_full.png" type="Texture" id=2]
+[ext_resource path="res://fonts/space_mono_regular.tres" type="DynamicFont" id=3]
+[ext_resource path="res://sprites/sword.png" type="Texture" id=4]
+[ext_resource path="res://scripts/CardObject.gd" type="Script" id=5]
+[ext_resource path="res://cards/card__reroll_all.tres" type="Resource" id=6]
+
+[node name="CardObject" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -175.0
+margin_right = 127.5
+margin_bottom = 175.0
+rect_clip_content = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+TEST__card_data = ExtResource( 6 )
+
+[node name="CardImage" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardOverlay" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardNameLabel" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = 35.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "This is a card"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardTextLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 204.0
+margin_right = -14.0
+margin_bottom = -14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Test Text
+Can this fit a lot of text on it. Sorta yes. It will fit some stuff"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardTypeTexture" type="TextureRect" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 36.0
+margin_bottom = 36.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
